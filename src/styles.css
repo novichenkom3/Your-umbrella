@@ -1,0 +1,182 @@
+.weather-app {
+  max-width: 720px;
+  margin: 70px auto;
+  padding: 20px;
+  background-color: #fafafa;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  border: 1px solid #c9356c;
+}
+
+.logo {
+  width: 70px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  position: relative;
+  top: -55px;
+  left: 70px;
+}
+
+.your-mobile {
+  font-size: medium;
+  color: #ff347f;
+}
+
+.umbrella {
+  color: #c9356c;
+}
+
+form {
+  position: relative;
+  right: -430px;
+  top: -117px;
+}
+
+#enter-a-city {
+  margin: -15px;
+  padding: 10px;
+  
+  border: 1px solid #c9356c;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #c9356c;
+  background-color: #f6a7c5;
+  color: #c9356c;
+  transition: all 200ms ease-in-out;
+}
+
+.search {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.search:hover {
+  background-color: #c9356c;
+  color: #fafafa;
+}
+
+.current {
+  position: relative;
+  top: -163px;
+  left: 340px;
+  margin-bottom: 0;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.current:hover {
+  background-color: #c9356c;
+  color: #fafafa;
+}
+
+.container-weather {
+  max-width: 680px;
+  display: block;
+  margin: -130px auto 0 auto;
+}
+
+.card {
+  margin: 0 auto;
+  transition: all 200ms ease-in-out;
+}
+
+.card:hover {
+  background-color: #f6a7c5;
+  color: #fafafa;
+}
+
+.card-body {
+  padding: 10px 3px;
+}
+
+.card-text {
+  text-align: center;
+  margin: 7px;
+  font-size: 15px;
+  color: #c9356c;
+}
+
+i {
+  font-size: 60px;
+  margin: 10px auto;
+  text-align: center;
+  color: #c9356c;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 300;
+}
+
+.city-data {
+  text-align: right;
+  margin: 20px 10px 0 0;
+}
+
+.city {
+  font-size: 50px;
+  color: #c9356c;
+}
+
+.day-time {
+  font-size: 25px;
+  margin-top: -10px;
+  color: #ff347f;
+}
+
+.degree {
+  font-size: 80px;
+  margin-bottom: -100px;
+  margin-left: 10px;
+  font-weight: 300;
+  position: relative;
+  top: -110px;
+  color: #c9356c;
+  right: 10px;
+}
+
+.cf {
+  position: relative;
+  color: #c9356c;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: -20px;
+  top: -120px;
+  right: -65px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+#celsius:hover {
+  color: #f6a7c5;
+  text-decoration: underline;
+}
+
+#fahrenheit:hover {
+  color: #f6a7c5;
+  text-decoration: underline;
+}
+
+.description {
+  position: relative;
+  top: -115px;
+  right: -115px;
+  margin-bottom: -100px;
+}
+
+.main-descr {
+  font-size: 25px;
+  font-weight: 500;
+  color: #c9356c;
+}
+
+.add-descr {
+  color: #ff347f;
+}

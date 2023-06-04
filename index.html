@@ -28,90 +28,92 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <img class="logo" src="images/Umbrella.svg" alt="LOGO" />
-        <h1>
-          <div class="your-mobile">Your mobile</div>
-          <span class="umbrella">Umbrella</span>
-        </h1>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <img class="logo" src="images/Umbrella.svg" alt="LOGO" />
+          <h1>
+            <div class="your-mobile">Your mobile</div>
+            <span class="umbrella">Umbrella</span>
+          </h1>
 
-        <form id="form">
-          <input
-            id="enter-a-city"
-            type="text"
-            placeholder="Enter a city"
-            autocomplete="off" />
-          <input class="input search" type="submit" value="Search" />
-        </form>
+          <form id="form">
+            <input
+              id="enter-a-city"
+              type="text"
+              placeholder="Enter a city"
+              autocomplete="off" />
+            <input class="input search" type="submit" value="Search" />
+          </form>
 
-        <button class="input current" id="current-location">Current</button>
+          <button class="input current" id="current-location">Current</button>
 
-        <div class="container-weather">
-          <div class="row">
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-text">Fri, 21/04</p>
-                <i class="fa-solid fa-cloud-rain"></i>
-                <h5 class="card-title">12°</h5>
+          <div class="container-weather">
+            <div class="row">
+              <div class="card col-2">
+                <div class="card-body">
+                  <p class="card-text">Fri, 21/04</p>
+                  <i class="fa-solid fa-cloud-rain"></i>
+                  <h5 class="card-title">12°</h5>
+                </div>
               </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-text">Sat, 22/04</p>
-                <i class="fa-solid fa-cloud-sun"></i>
-                <h5 class="card-title">19°</h5>
+              <div class="card col-2">
+                <div class="card-body">
+                  <p class="card-text">Sat, 22/04</p>
+                  <i class="fa-solid fa-cloud-sun"></i>
+                  <h5 class="card-title">19°</h5>
+                </div>
               </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-text">Sun, 23/04</p>
-                <i class="fa-solid fa-sun"></i>
-                <h5 class="card-title">21°</h5>
+              <div class="card col-2">
+                <div class="card-body">
+                  <p class="card-text">Sun, 23/04</p>
+                  <i class="fa-solid fa-sun"></i>
+                  <h5 class="card-title">21°</h5>
+                </div>
               </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-text">Mon, 24/04</p>
-                <i class="fa-solid fa-cloud-sun-rain"></i>
-                <h5 class="card-title">17°</h5>
+              <div class="card col-2">
+                <div class="card-body">
+                  <p class="card-text">Mon, 24/04</p>
+                  <i class="fa-solid fa-cloud-sun-rain"></i>
+                  <h5 class="card-title">17°</h5>
+                </div>
               </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-text">Tue, 25/04</p>
-                <i class="fa-solid fa-cloud"></i>
-                <h5 class="card-title">12°</h5>
+              <div class="card col-2">
+                <div class="card-body">
+                  <p class="card-text">Tue, 25/04</p>
+                  <i class="fa-solid fa-cloud"></i>
+                  <h5 class="card-title">12°</h5>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="city-data">
-          <span class="city"></span>
-          <div class="day-time">Thursday 23:43</div>
-        </div>
+          <div class="city-data">
+            <span class="city"></span>
+            <div class="day-time">Thursday 23:43</div>
+          </div>
 
-        <div class="degree"></div>
-        <div class="cf">
-          <span id="celsius">°C</span>
-          |
-          <span id="fahrenheit">°F</span>
-        </div>
+          <div class="degree"></div>
+          <div class="cf">
+            <span id="celsius">°C</span>
+            |
+            <span id="fahrenheit">°F</span>
+          </div>
 
-        <div class="description">
-          <div class="main-descr"></div>
-          <span class="add-descr">
-            Humidity: <span id="humidity"></span>%
-            <br />
-            Wind: <span id="wind"></span> km/h
-          </span>
+          <div class="description">
+            <div class="main-descr"></div>
+            <span class="add-descr">
+              Humidity: <span id="humidity"></span>%
+              <br />
+              Wind: <span id="wind"></span> km/h
+            </span>
+          </div>
         </div>
-      </div>
-      <div class="link-code">
-        <a href="https://github.com/novichenkom3/Your-umbrella"
-          >Open-source code</a
-        >
-        by Mariia Novichenko
+        <div class="link-code">
+          <a href="https://github.com/novichenkom3/Your-umbrella"
+            >Open-source code</a
+          >
+          by Mariia Novichenko
+        </div>
       </div>
     </div>
     <script src="src/script.js"></script>

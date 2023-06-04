@@ -1,6 +1,12 @@
-.weather-app {
+.weather-app-wrapper {
   max-width: 720px;
   margin: 70px auto;
+}
+
+.weather-app {
+  display: block;
+  margin: 0 auto;
+  max-width: 720px;
   padding: 20px;
   background-color: #fafafa;
   font-family: "Raleway", sans-serif;
@@ -39,7 +45,7 @@ form {
 #enter-a-city {
   margin: -15px;
   padding: 10px;
-  
+
   border: 1px solid #c9356c;
 }
 

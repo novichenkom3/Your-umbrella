@@ -1,6 +1,6 @@
 //Date and time
-function changeDate(timestamp) {
-  let now = new Date(timestamp);
+function changeDate() {
+  let now = new Date();
   let days = [
     "Sunday",
     "Monday",
@@ -23,6 +23,9 @@ function changeDate(timestamp) {
 
   return `${day} ${hours}:${minutes}`;
 }
+let date = document.querySelector(".day-time");
+let updatedDate = new Date();
+date.innerHTML = changeDate(updatedDate);
 
 //Convert to C and F
 function convertToF(event) {
@@ -61,9 +64,12 @@ function displayWeather(response) {
   document.querySelector(".main-descr").innerHTML =
     response.data.condition.description;
 
-  document.querySelector(".day-time").innerHTML = changeDate(
-    response.data.time * 1000
-  );
+  document
+    .querySelector("#main-icon")
+    .setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    );
 }
 
 function updateCity(city) {

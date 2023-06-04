@@ -12,6 +12,7 @@
   font-family: "Raleway", sans-serif;
   border-radius: 10px;
   border: 1px solid #c9356c;
+  max-height: 500px;
 }
 
 .logo {
@@ -45,7 +46,6 @@ form {
 #enter-a-city {
   margin: -15px;
   padding: 10px;
-
   border: 1px solid #c9356c;
 }
 
@@ -186,6 +186,15 @@ i {
 
 .add-descr {
   color: #ff347f;
+}
+
+#main-icon {
+  position: relative;
+  right: -220px;
+  top: -115px;
+  width: 100px;
+  margin: 0;
+  margin-bottom: -100px;
 }
 
 .link {

@@ -186,3 +186,22 @@ i {
 .add-descr {
   color: #ff347f;
 }
+
+.link {
+  margin-top: 10px;
+}
+
+.my-link {
+  color: #f6a7c5;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+.my-link:hover {
+  color: #c9356bd0;
+  text-decoration: underline;
+}
+
+.my-name {
+  color: rgba(39, 34, 34, 0.544);
+}

@@ -137,6 +137,11 @@ i {
   color: #ff347f;
 }
 
+.degreeCF {
+position: relative;
+right: -75px;
+}
+
 .degree {
   font-size: 80px;
   margin-bottom: -100px;
@@ -173,7 +178,7 @@ i {
 .description {
   position: relative;
   top: -115px;
-  right: -115px;
+  right: -190px;
   margin-bottom: -100px;
 }
 
@@ -190,8 +195,8 @@ i {
 
 #main-icon {
   position: relative;
-  right: -220px;
   top: -115px;
+  right: 15px;
   width: 100px;
   margin: 0;
   margin-bottom: -100px;

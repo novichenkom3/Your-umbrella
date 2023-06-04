@@ -138,8 +138,8 @@ i {
 }
 
 .degreeCF {
-position: relative;
-right: -75px;
+  position: relative;
+  right: -75px;
 }
 
 .degree {
@@ -161,17 +161,15 @@ right: -75px;
   margin-bottom: -20px;
   top: -120px;
   right: -65px;
-  cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 
-#celsius:hover {
+.inactive {
   color: #f6a7c5;
-  text-decoration: underline;
+  cursor: pointer;
 }
 
-#fahrenheit:hover {
-  color: #f6a7c5;
+.inactive:hover {
   text-decoration: underline;
 }
 

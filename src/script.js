@@ -27,32 +27,14 @@ let date = document.querySelector(".day-time");
 let updatedDate = new Date();
 date.innerHTML = changeDate(updatedDate);
 
-//Convert to C and F
-function convertToF(event) {
-  event.preventDefault();
-  let temperature = document.querySelector(".degree");
-  temperature.innerHTML = 64;
-}
-
-function convertToC(event) {
-  event.preventDefault();
-  let temperature = document.querySelector(".degree");
-  temperature.innerHTML = 18;
-}
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convertToF);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", convertToC);
-
 //Current weather in different cities
 function displayWeather(response) {
   let city = document.querySelector(".city");
   city.innerHTML = response.data.city;
 
+  celsiusTemp = response.data.temperature.current;
   let degree = document.querySelector(".degree");
-  degree.innerHTML = Math.round(response.data.temperature.current);
+  degree.innerHTML = Math.round(celsiusTemp);
 
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
@@ -101,5 +83,33 @@ formSubmit.addEventListener("submit", submitCity);
 
 let current = document.querySelector("#current-location");
 current.addEventListener("click", getLocation);
+
+//Convert to C and F
+function convertToF(event) {
+  event.preventDefault();
+  let temperature = document.querySelector(".degree");
+
+  fahrenheit.classList.remove("inactive");
+  celsius.classList.add("inactive");
+
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function convertToC(event) {
+  event.preventDefault();
+  document.querySelector(".degree").innerHTML = Math.round(celsiusTemp);
+
+  fahrenheit.classList.add("inactive");
+  celsius.classList.remove("inactive");
+}
+
+let celsiusTemp = null;
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", convertToF);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", convertToC);
 
 updateCity("Kharkiv");

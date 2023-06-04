@@ -181,6 +181,7 @@ i {
   font-size: 25px;
   font-weight: 500;
   color: #c9356c;
+  text-transform: capitalize;
 }
 
 .add-descr {

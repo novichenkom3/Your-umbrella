@@ -1,6 +1,6 @@
 //Date and time
-function changeDate() {
-  let now = new Date();
+function changeDate(timestamp) {
+  let now = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -23,11 +23,8 @@ function changeDate() {
 
   return `${day} ${hours}:${minutes}`;
 }
-let date = document.querySelector(".day-time");
-let updatedDate = new Date();
-date.innerHTML = changeDate(updatedDate);
 
-//Convert to c and F
+//Convert to C and F
 function convertToF(event) {
   event.preventDefault();
   let temperature = document.querySelector(".degree");
@@ -63,6 +60,10 @@ function displayWeather(response) {
 
   document.querySelector(".main-descr").innerHTML =
     response.data.condition.description;
+
+  document.querySelector(".day-time").innerHTML = changeDate(
+    response.data.time * 1000
+  );
 }
 
 function updateCity(city) {

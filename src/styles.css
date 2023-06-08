@@ -87,6 +87,10 @@ form {
   margin: -130px auto 0 auto;
 }
 
+.card {
+  margin: 0 11.5px;
+}
+
 .card-text {
   text-align: center;
   font-size: 15px;

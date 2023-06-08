@@ -27,6 +27,31 @@ let date = document.querySelector(".day-time");
 let updatedDate = new Date();
 date.innerHTML = changeDate(updatedDate);
 
+//Working with forecast
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML += `
+    <div class="card col-2">
+      <div class="card-body">
+        <p class="card-text">${day}, 21/04</p>
+        <img class="daily-icons" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-night.png" alt="weather-icon">
+        <h5 class="card-title">
+        <span id="temp-max">12°</span
+        ><span id="temp-min">10°</span>
+        </h5>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML += `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
 //Current weather in different cities
 function displayWeather(response) {
   let city = document.querySelector(".city");
@@ -113,3 +138,4 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertToC);
 
 updateCity("Kharkiv");
+displayForecast();

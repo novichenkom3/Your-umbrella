@@ -31,8 +31,9 @@ date.innerHTML = changeDate(updatedDate);
 function displayForecast() {
   let forecast = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
+
   days.forEach(function (day) {
     forecastHTML += `
     <div class="card col-2">
@@ -50,6 +51,13 @@ function displayForecast() {
 
   forecastHTML += `</div>`;
   forecast.innerHTML = forecastHTML;
+}
+
+function getForecast(coords) {
+  let apiKey = "1c72eb5fe2386ao6dffebt40b3bef0af";
+  let url = `https://api.shecodes.io/weather/v1/forecast?lat=${coords.latitude}&lon=${coords.longitude}&key=${apiKey}&units=metric`;
+
+  axios.get(url).then(displayForecast);
 }
 
 //Current weather in different cities
@@ -77,6 +85,8 @@ function displayWeather(response) {
       "src",
       `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
+
+  getForecast(response.data.coordinates);
 }
 
 function updateCity(city) {
@@ -138,4 +148,3 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertToC);
 
 updateCity("Kharkiv");
-displayForecast();

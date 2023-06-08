@@ -12,7 +12,7 @@
   font-family: "Raleway", sans-serif;
   border-radius: 10px;
   border: 1px solid #c9356c;
-  max-height: 500px;
+  max-height: 470px;
 }
 
 .logo {
@@ -87,38 +87,34 @@ form {
   margin: -130px auto 0 auto;
 }
 
-.card {
-  margin: 0 auto;
-  transition: all 200ms ease-in-out;
-}
-
-.card:hover {
-  background-color: #f6a7c5;
-  color: #fafafa;
-}
-
-.card-body {
-  padding: 10px 3px;
-}
-
 .card-text {
   text-align: center;
-  margin: 7px;
   font-size: 15px;
   color: #c9356c;
 }
 
-i {
-  font-size: 60px;
-  margin: 10px auto;
-  text-align: center;
-  color: #c9356c;
+.daily-icons {
+  display: block;
+  width: 90px;
+  position: relative;
+  left: -15px;
+  margin-top: -20px;
 }
 
 .card-title {
   text-align: center;
-  font-size: 45px;
-  font-weight: 300;
+  font-size: 21px;
+  font-weight: 400;
+  
+}
+
+#temp-max {
+  color: #c9356c;
+}
+
+#temp-min {
+  color: #f6a7c5;
+  padding-left: 3px;
 }
 
 .city-data {

@@ -36,6 +36,32 @@ function formatDate(timestamp) {
   return days[day];
 }
 
+function updateFullDate(timestamp) {
+  let now = new Date(timestamp * 1000);
+  let date = now.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+
+  let month = now.getMonth();
+  let monthTwelwe = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+  ];
+
+  return `${date}.${monthTwelwe[month]}`;
+}
+
 function displayForecast(response) {
   let forecast = document.querySelector("#forecast");
 
@@ -47,7 +73,9 @@ function displayForecast(response) {
       forecastHTML += `
         <div class="card col-2">
           <div class="card-body">
-            <p class="card-text">${formatDate(fullForecast.time)}, 21/04</p>
+            <p class="card-text">${formatDate(fullForecast.time)}, 
+            </br>
+            ${updateFullDate(fullForecast.time)}</p>
             <img class="daily-icons" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
               fullForecast.condition.icon
             }.png" alt="weather-icon">
